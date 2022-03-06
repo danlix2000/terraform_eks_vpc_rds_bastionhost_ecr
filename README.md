@@ -1,16 +1,16 @@
 # EKS environment provisioning - Terraform [Terraform Cloud - CLI-driven workflow]
 
-Services that are going to Created
+**Services that are going to Created**
 
-EKS 
-EKS managed node group
-VPC 
-ECR
-IAM policies
-PostgreSQL RDS
-Bastion host
-Security groups 
-SSH key
+- EKS 
+- EKS managed node group
+- VPC 
+- ECR
+- IAM policies
+- PostgreSQL RDS
+- Bastion host
+- Security groups 
+- SSH key
 
 Here bastion host used because EKS cluster and RDS in private subnet. if users are not in VPN with AWS. have to use bastion host to conenct to RDS or ssh to Cluster if needed.
 
@@ -64,17 +64,11 @@ terraform plan
 terraform apply -auto-approve
 ```
 
-you will get outputs of DB,ECR,EKS, etc.
-
-
-Completed output Terraform
-
-![](diagrams/tf-apply.JPG)
-
+you will get outputs of ECR,EKS,RDS etc.
 
 
 **Destroy Environemnt**
-
+```
 terraform destroy -auto-approve 
-
-In AWS console check RDS snapshots and delete it
+```
+- In AWS console check RDS snapshots and delete it
