@@ -67,7 +67,7 @@ terraform apply -auto-approve
 you will get outputs of ECR,EKS,RDS etc.
 
 
-**Destroy Environemnt**
+**Destroy Environment**
 ```
 terraform destroy -auto-approve 
 ```
